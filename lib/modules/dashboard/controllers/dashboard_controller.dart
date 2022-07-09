@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import '/routes/app_pages.dart';
 
-class HomeController extends GetxController {
+class DashboardController extends GetxController {
   final count = 0.obs;
   var tabIndex = 0;
 
