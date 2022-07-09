@@ -1,7 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import '../controllers/home_controller.dart';
+import '../../dashboard/views/dashboard_view.dart';
+import '../../report/views/report_view.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -30,7 +33,9 @@ class _HomeViewState extends State<HomeView> {
             child: IndexedStack(
               index: controller.tabIndex,
               children: [
-                // HomePage(),
+                ReportView(),
+                DashboardView(),
+                ReportView(),
                 // NewsPage(),
                 // AlertsPage(),
                 // AccountPage(),
@@ -38,23 +43,29 @@ class _HomeViewState extends State<HomeView> {
             ),
           ),
           bottomNavigationBar: BottomNavigationBar(
+            selectedIconTheme: IconThemeData(color: Colors.amberAccent, size: 25),
+            selectedItemColor: Colors.amberAccent,
+            unselectedIconTheme: IconThemeData(
+              color: Colors.deepOrangeAccent,
+            ),
+            unselectedItemColor: Colors.deepOrangeAccent,
             onTap: controller.changeTabIndex,
             currentIndex: controller.tabIndex,
             items: [
               BottomNavigationBarItem(
-                icon: Icon(Icons.home),
+                icon: Icon(CupertinoIcons.home),
                 label: 'Home',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.camera),
-                label: 'News',
+                icon: Icon(CupertinoIcons.camera),
+                label: 'Report',
               ),
+              // BottomNavigationBarItem(
+              //   icon: Icon(CupertinoIcons.bell),
+              //   label: 'Alerts',
+              // ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.business),
-                label: 'Alerts',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.person),
+                icon: Icon(CupertinoIcons.person),
                 label: 'Account',
               ),
             ],

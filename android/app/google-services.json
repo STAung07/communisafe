@@ -30,6 +30,13 @@
             {
               "client_id": "571817859767-5rt66norc9dpcjn61mbk1cb8r2nrpvgv.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "571817859767-b6j1ge282deb46a58lftj6irqjipn050.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.communisafe"
+              }
             }
           ]
         }
