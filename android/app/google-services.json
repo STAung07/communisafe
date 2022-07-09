@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "571817859767",
+    "firebase_url": "https://communisafe-34d52-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "communisafe-34d52",
+    "storage_bucket": "communisafe-34d52.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:571817859767:android:2a3aa019ada41342d78b32",
+        "android_client_info": {
+          "package_name": "com.example.communisafe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "571817859767-5rt66norc9dpcjn61mbk1cb8r2nrpvgv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAW5Lmd4s2ZrOwi4ahdxB7yrtm5-ARmGLg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "571817859767-5rt66norc9dpcjn61mbk1cb8r2nrpvgv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "571817859767-b6j1ge282deb46a58lftj6irqjipn050.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.communisafe"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
