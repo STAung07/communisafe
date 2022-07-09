@@ -20,6 +20,7 @@ abstract class Routes {
   static const CONNECT_PROGRESS = _Paths.CONNECT_PROGRESS;
   static const AGREEMENT = _Paths.AGREEMENT;
   static const FOOD_LOG = _Paths.FOOD_LOG;
+  static const LOG_IN = _Paths.LOG_IN;
 }
 
 abstract class _Paths {
@@ -42,4 +43,5 @@ abstract class _Paths {
   static const CONNECT_PROGRESS = '/connect-progress';
   static const AGREEMENT = '/agreement';
   static const FOOD_LOG = '/food-log';
+  static const LOG_IN = '/log-in';
 }

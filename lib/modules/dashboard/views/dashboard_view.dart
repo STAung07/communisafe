@@ -3,24 +3,23 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/dashboard_controller.dart';
 
-class DashboardView extends StatefulWidget {
-  const DashboardView({Key? key}) : super(key: key);
+// class DashboardView extends StatefulWidget {
+//   const DashboardView({Key? key}) : super(key: key);
+//
+//   // This widget is the home page of your application. It is stateful, meaning
+//   // that it has a State object (defined below) that contains fields that affect
+//   // how it looks.
+//
+//   // This class is the configuration for the state. It holds the values (in this
+//   // case the title) provided by the parent (in this case the App widget) and
+//   // used by the build method of the State. Fields in a Widget subclass are
+//   // always marked "final".
+//
+//   @override
+//   State<DashboardView> createState() => _DashboardViewState();
+// }
 
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  @override
-  State<DashboardView> createState() => _DashboardViewState();
-}
-
-class _DashboardViewState extends State<DashboardView> {
-  final controller = Get.find<DashboardController>();
+class DashboardView extends GetView<DashboardController> {
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done

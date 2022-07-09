@@ -2,13 +2,13 @@ import 'package:get/get.dart';
 import '/routes/app_pages.dart';
 
 class DashboardController extends GetxController {
-  final count = 0.obs;
-  var tabIndex = 0;
+  // final count = 0.obs;
+  // var tabIndex = 0;
 
-  void changeTabIndex(int index) {
-    tabIndex = index;
-    update();
-  }
+  // void changeTabIndex(int index) {
+  //   tabIndex = index;
+  //   update();
+  // }
 
   @override
   void onInit() {
@@ -22,7 +22,7 @@ class DashboardController extends GetxController {
 
   @override
   void onClose() {}
-  void increment() => count.value++;
+  // void increment() => count.value++;
 
   // example
   void goFoodLog() {
