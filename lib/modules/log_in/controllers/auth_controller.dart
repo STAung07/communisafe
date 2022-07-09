@@ -20,7 +20,6 @@ class AuthController extends GetxController {
     // Since we have to use that many times I just made a constant file and declared there
 
     firebaseUser = Rx<User?>(auth.currentUser);
-    print(firebaseUser);
     googleSignInAccount = Rx<GoogleSignInAccount?>(googleSign.currentUser);
 
     firebaseUser.bindStream(auth.userChanges());
@@ -41,7 +40,6 @@ class AuthController extends GetxController {
   }
 
   _setInitialScreenGoogle(GoogleSignInAccount? googleSignInAccount) {
-    print(googleSignInAccount);
     if (googleSignInAccount == null) {
       // if the user is not found then the user is navigated to the Register Screen
       Get.offAll(() => const Register());
