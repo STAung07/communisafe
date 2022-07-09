@@ -1,4 +1,5 @@
 import 'package:communiSAFE/constants/firebase_auth_constants.dart';
+import 'package:communiSAFE/modules/home/views/home_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -19,6 +20,7 @@ class AuthController extends GetxController {
     // Since we have to use that many times I just made a constant file and declared there
 
     firebaseUser = Rx<User?>(auth.currentUser);
+    print(firebaseUser);
     googleSignInAccount = Rx<GoogleSignInAccount?>(googleSign.currentUser);
 
     firebaseUser.bindStream(auth.userChanges());
@@ -34,8 +36,7 @@ class AuthController extends GetxController {
       Get.offAll(() => const Register());
     } else {
       // if the user exists and logged in the the user is navigated to the Home Screen
-      // Get.offAll(() => Home());
-
+      Get.offAll(() => const HomeView());
     }
   }
 
@@ -46,7 +47,7 @@ class AuthController extends GetxController {
       Get.offAll(() => const Register());
     } else {
       // if the user exists and logged in the the user is navigated to the Home Screen
-      // Get.offAll(() => Home());
+      Get.offAll(() => const HomeView());
     }
   }
 

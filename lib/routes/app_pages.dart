@@ -1,3 +1,5 @@
+import 'package:communiSAFE/modules/home/bindings/home_binding.dart';
+import 'package:communiSAFE/modules/home/views/home_view.dart';
 import 'package:get/get.dart';
 import '../modules/report/bindings/report_binding.dart';
 import '../modules/report/views/report_view.dart';
@@ -11,13 +13,18 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.HOME;
+  static const INITIAL = Routes.LOG_IN;
 
   static final routes = [
     GetPage(
-      name: _Paths.HOME,
+      name: _Paths.LOG_IN,
       page: () => const Register(),
       binding: LogInBinding(),
+    ),
+    GetPage(
+      name: _Paths.HOME,
+      page: () => const HomeView(),
+      binding: HomeBinding(),
     ),
     GetPage(
       name: _Paths.DASHBOARD,
