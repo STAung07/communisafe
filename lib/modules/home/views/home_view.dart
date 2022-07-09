@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import '../controllers/home_controller.dart';
 import '../../dashboard/views/dashboard_view.dart';
 import '../../report/views/report_view.dart';
+import '../../profile/views/profile_view.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -35,7 +36,7 @@ class _HomeViewState extends State<HomeView> {
               children: [
                 ReportView(),
                 DashboardView(),
-                ReportView(),
+                ProfileView(),
                 // NewsPage(),
                 // AlertsPage(),
                 // AccountPage(),
@@ -60,10 +61,6 @@ class _HomeViewState extends State<HomeView> {
                 icon: Icon(CupertinoIcons.camera),
                 label: 'Report',
               ),
-              // BottomNavigationBarItem(
-              //   icon: Icon(CupertinoIcons.bell),
-              //   label: 'Alerts',
-              // ),
               BottomNavigationBarItem(
                 icon: Icon(CupertinoIcons.person),
                 label: 'Account',
