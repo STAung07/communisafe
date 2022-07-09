@@ -1,7 +1,10 @@
+import 'package:communiSAFE/modules/profile/controllers/profile_controller.dart';
+import 'package:communiSAFE/modules/report/controllers/report_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import '../../dashboard/controllers/dashboard_controller.dart';
 import '../controllers/home_controller.dart';
 import '../../dashboard/views/dashboard_view.dart';
 import '../../report/views/report_view.dart';
@@ -25,6 +28,9 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> {
   final controller = Get.find<HomeController>();
+  final reportController = Get.put(ReportController());
+  final dashboardController = Get.put(DashboardController());
+  final profileController = Get.put(ProfileController());
   @override
   Widget build(BuildContext context) {
     return GetBuilder<HomeController>(
@@ -34,8 +40,9 @@ class _HomeViewState extends State<HomeView> {
             child: IndexedStack(
               index: controller.tabIndex,
               children: [
-                ReportView(),
                 DashboardView(),
+                //Text('Report View'),
+                ReportView(),
                 ProfileView(),
                 // NewsPage(),
                 // AlertsPage(),
@@ -44,7 +51,8 @@ class _HomeViewState extends State<HomeView> {
             ),
           ),
           bottomNavigationBar: BottomNavigationBar(
-            selectedIconTheme: IconThemeData(color: Colors.amberAccent, size: 25),
+            selectedIconTheme:
+                IconThemeData(color: Colors.amberAccent, size: 25),
             selectedItemColor: Colors.amberAccent,
             unselectedIconTheme: IconThemeData(
               color: Colors.deepOrangeAccent,

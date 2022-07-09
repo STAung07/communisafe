@@ -7,28 +7,24 @@ import '../controllers/report_controller.dart';
 class ReportView extends GetView<ReportController> {
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<ReportController>(
-      builder: (controller) {
-        return Scaffold(
-          resizeToAvoidBottomInset: false,
-          body: Padding(
-            padding: const EdgeInsets.fromLTRB(40, 30, 40, 0),
-            child: Container(
-              alignment: Alignment.topLeft,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  EnterInput(
-                      hint: 'Enter',
-                      controller: controller.textController,
-                      obscureText: false),
-                ],
-              ),
-            ),
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(40, 30, 40, 0),
+        child: Container(
+          alignment: Alignment.topLeft,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              EnterInput(
+                  hint: 'Enter',
+                  controller: controller.textController,
+                  obscureText: false),
+            ],
           ),
-        );
-      },
+        ),
+      ),
     );
   }
 }
