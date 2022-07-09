@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 import '/routes/app_pages.dart';
 
 class ReportController extends GetxController {
+  final count = 0.obs;
+
   @override
   void onInit() {
     super.onInit();
@@ -14,6 +16,7 @@ class ReportController extends GetxController {
 
   @override
   void onClose() {}
+  void increment() => count.value++;
 
   // example
   void goFoodLog() {
