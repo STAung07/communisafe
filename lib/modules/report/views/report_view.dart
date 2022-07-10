@@ -2,6 +2,7 @@ import 'package:communiSAFE/modules/report/components/enter_input.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../../FirestoreDBHelper.dart';
 import '../controllers/report_controller.dart';
 import '../../models/entry.dart';
@@ -14,26 +15,58 @@ class ReportView extends GetView<ReportController> {
       padding: const EdgeInsets.all(15.0),
       child: Column(
         children: [
-          Row(
-            children: [
-              const Icon(Icons.add_a_photo),
-              ElevatedButton(
-                onPressed: () => {controller.setTag.value = controller.tags[0]},
-                child: Obx(
-                  () => Text(controller.setTag.value),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  height: 150,
+                  width: 150,
+                  decoration: BoxDecoration(
+                    color: Color(0xffF5F5FF),
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  ),
+                  child: ElevatedButton(
+                      onPressed: () => {controller.uploadPhoto()},
+                      child: const Icon(Icons.add_a_photo)),
                 ),
-              ),
-            ],
+                ElevatedButton(
+                  onPressed: () => {controller.changeTagIndex()},
+                  child: Obx(
+                    () => Text(
+                      controller.tags[controller.tagIndex.value],
+                      style: GoogleFonts.poppins(
+                        textStyle: TextStyle(
+                          color: Color(0xffffffff),
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                          height: 1.0,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
-          EnterInput(
-            hint: 'Title',
-            controller: controller.titleTextEditorController,
-            obscureText: false,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: EnterInput(
+              hint: 'Title',
+              iconData: Icon(Icons.search),
+              controller: controller.titleTextEditorController,
+              obscureText: false,
+            ),
           ),
-          EnterInput(
-            hint: 'Description',
-            controller: controller.descriptionTextEditorController,
-            obscureText: false,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: EnterInput(
+              hint: 'Description',
+              iconData: Icon(Icons.description),
+              controller: controller.descriptionTextEditorController,
+              obscureText: false,
+            ),
           ),
           ElevatedButton(
             onPressed: () async {
@@ -41,7 +74,7 @@ class ReportView extends GetView<ReportController> {
                 title: controller.titleTextEditorController.text.trim(),
                 description:
                     controller.descriptionTextEditorController.text.trim(),
-                tag: controller.setTag.value,
+                tag: controller.tags[controller.tagIndex.value],
                 isDone: false,
               );
               await FirestoreDb.addEntry(entrymodel);

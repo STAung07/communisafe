@@ -22,6 +22,7 @@ abstract class Routes {
   static const AGREEMENT = _Paths.AGREEMENT;
   static const FOOD_LOG = _Paths.FOOD_LOG;
   static const LOG_IN = _Paths.LOG_IN;
+  static const UPLOAD_PHOTO = _Paths.UPLOAD_PHOTO;
 }
 
 abstract class _Paths {
@@ -46,4 +47,5 @@ abstract class _Paths {
   static const AGREEMENT = '/agreement';
   static const FOOD_LOG = '/food-log';
   static const LOG_IN = '/log-in';
+  static const UPLOAD_PHOTO = '/upload-photo';
 }

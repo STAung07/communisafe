@@ -3,12 +3,14 @@ import 'package:google_fonts/google_fonts.dart';
 
 class EnterInput extends StatefulWidget {
   final String hint;
+  final Widget iconData;
   final TextEditingController controller;
   final bool obscureText;
 
   const EnterInput({
     Key? key,
     required this.hint,
+    required this.iconData,
     required this.controller,
     required this.obscureText,
   }) : super(key: key);
@@ -24,7 +26,7 @@ class _EnterInputState extends State<EnterInput> {
       height: 49,
       child: TextField(
         decoration: InputDecoration(
-          prefixIcon: Icon(Icons.search),
+          prefixIcon: widget.iconData,
           filled: true,
           border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(

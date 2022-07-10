@@ -9,6 +9,7 @@ import '../modules/log_in/bindings/log_in_binding.dart';
 import '../modules/log_in/views/log_in_view.dart';
 import '../modules/profile/bindings/profile_binding.dart';
 import '../modules/profile/views/profile_view.dart';
+import '../modules/upload_photos/views/upload_photos_view.dart';
 
 part 'app_routes.dart';
 
@@ -42,6 +43,11 @@ class AppPages {
       name: _Paths.PROFILE,
       page: () => ProfileView(),
       binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.UPLOAD_PHOTO,
+      page: () => UploadPhotoView(),
+      //binding: UploadPhotoBinding(),
     ),
   ];
 }
