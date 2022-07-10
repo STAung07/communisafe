@@ -44,10 +44,5 @@ class AppPages {
       page: () => ProfileView(),
       binding: ProfileBinding(),
     ),
-    GetPage(
-      name: _Paths.UPLOAD_PHOTO,
-      page: () => UploadPhotoView(),
-      //binding: UploadPhotoBinding(),
-    ),
   ];
 }
