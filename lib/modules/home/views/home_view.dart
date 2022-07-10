@@ -29,7 +29,7 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   final controller = Get.find<HomeController>();
   final reportController = Get.put(ReportController());
-  final dashboardController = Get.put(DashboardController());
+  final dashboardController = Get.put(EntryController());
   final profileController = Get.put(ProfileController());
   @override
   Widget build(BuildContext context) {

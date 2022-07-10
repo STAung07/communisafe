@@ -23,7 +23,7 @@ void main() async {
   await firebaseInitialization.then((value) {
     Get.put(AuthController());
     Get.put(HomeController());
-    Get.put(DashboardController());
+    //Get.put(EntryController());
   });
 
   runApp(
