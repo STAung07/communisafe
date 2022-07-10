@@ -10,7 +10,9 @@ class FirestoreDb {
         .doc(auth.currentUser!.uid)
         .collection('entries')
         .add({
-      'content': entrymodel.content,
+      'title': entrymodel.title,
+      'description': entrymodel.description,
+      'tag': entrymodel.tag,
       'createdOn': Timestamp.now(),
       'isDone': false,
     });
